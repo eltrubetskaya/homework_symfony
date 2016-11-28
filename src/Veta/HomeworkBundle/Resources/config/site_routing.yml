@@ -1,0 +1,7 @@
+veta_homework_site_contacts:
+    path:     /contacts
+    defaults: { _controller: VetaHomeworkBundle:Site:contacts }
+
+veta_homework_site_home:
+    path:     /home
+    defaults: { _controller: VetaHomeworkBundle:Site:home }
