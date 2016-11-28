@@ -12,3 +12,36 @@ veta_homework_view:
     requirements:
             slug: '\d+'
             _locale: 'en|uk'
+
+veta_homework_user:
+      path:     /user/{id}
+      defaults: { _controller: VetaHomeworkBundle:User:show }
+      requirements:
+          _method: GET
+          id: '\d+'
+
+veta_homework_user_create:
+    path:  /user/create
+    defaults: { _controller: VetaHomeworkBundle:User:create }
+    requirements:
+        _method: POST
+
+veta_homework_user_edit:
+    path:  /user/edit/{id}
+    defaults: { _controller: VetaHomeworkBundle:User:edit }
+    requirements:
+        _method: PUT
+        id: '\d+'
+
+veta_homework_user_delete:
+    path:  /user/delete/{id}
+    defaults: { _controller: VetaHomeworkBundle:User:delete }
+    requirements:
+        _method: DELETE
+        id: '\d+'
+
+veta_homework_user_patch:
+    path:  /user/change
+    defaults: { _controller: VetaHomeworkBundle:User:change }
+    requirements:
+        _method: PATCH
