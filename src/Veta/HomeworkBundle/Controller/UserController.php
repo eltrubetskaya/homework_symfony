@@ -35,7 +35,7 @@ class UserController extends Controller
         if (!$user) {
             //throw $this->createNotFoundException('No user found for id '.$userId);
             $response->setContent('No user found for id '.$userId);
-        }else{
+        } else {
             $jsonContent = $serializer->serialize($user, 'json');
             $response->setContent($jsonContent);
         }
@@ -124,7 +124,7 @@ class UserController extends Controller
         )->setParameter('id', 5);
 
         $users = $query->getResult();
-        foreach ($users as $user){
+        foreach ($users as $user) {
             $user->setFirstName('Boo');
         }
         $em->flush();
