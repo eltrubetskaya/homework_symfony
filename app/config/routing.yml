@@ -1,3 +1,15 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+veta_homework:
+    resource: "@VetaHomeworkBundle/Resources/config/routing.yml"
+    prefix: /
+
+veta_homework_site:
+    resource: "@VetaHomeworkBundle/Resources/config/site_routing.yml"
+    prefix: /site
+
+# redirecting to homepage
+site:
+    path: /site
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: homepage
+        permanent: true

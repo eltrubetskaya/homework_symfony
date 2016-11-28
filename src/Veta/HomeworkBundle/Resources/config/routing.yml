@@ -1,0 +1,14 @@
+veta_homework_homepage:
+    path:     /
+    defaults: { _controller: VetaHomeworkBundle:Default:index }
+
+veta_homework_about:
+    path:     /about
+    defaults: { _controller: VetaHomeworkBundle:Default:about }
+
+veta_homework_view:
+    path:     /{_locale}/news/{slug}
+    defaults: { _controller: VetaHomeworkBundle:Default:view, slug: 1 }
+    requirements:
+            slug: '\d+'
+            _locale: 'en|uk'
